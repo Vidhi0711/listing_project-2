@@ -1,0 +1,49 @@
+<% layout('/layout/boilerplate') %>
+
+<body>
+    <form method="get" action="/notices/typeofnotice" >
+
+    <button type="submit" class="btn btn-primary" action="/notices/addnew">
+        Add New Notice
+      
+
+    </button>
+</form>
+<div class="row">
+<div class="col-md-3" > 
+
+    <% for(notice of notices) { %>
+    <div class="card col-mid-3" style="width: 20rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%=notice.title %></h5>
+        
+         
+          <p class="card-text"><%=notice.content %> </p>
+          <%  if (notice.image) { %> 
+            <div class="col-1">
+                <a href="image.jpg" download="School_Notice.jpg">
+
+            <img  class="notice-image" src="<%=notice.image%>" alt="none"> </a>
+          </div><% } %> 
+          <h7>
+            <%= new Date(notice.createdAt).toLocaleString("en-IN", { 
+              year: "numeric", month: "2-digit", day: "2-digit", 
+              hour: "2-digit", minute: "2-digit", second: "2-digit", 
+              hour12: false 
+            }) %>
+          </h7>
+          <div class="editdelete">
+            <a href="/notices/<%=notice._id%>/edit" class="btn-edit">Edit</a>
+            <form method="post" action='/notices/<%=notice._id%>/delete?_method=delete'>
+              <button type="submit" class="btn-delete">
+                  Delete
+              </button>
+            </form>
+          </div>           
+          </form>
+        </div>
+      </div>
+      <% }  %>
+    </div>
+</div>
+</body>

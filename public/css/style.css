@@ -1,0 +1,47 @@
+.editdelete{
+    display:flex;
+    justify-content:space-between;
+   gap:1rem;
+}
+.btn-edit{
+    background-color:red;
+    color:white;
+    font-size:20x;
+    font-weight:5px;
+    border-radius:5px;
+    text-decoration:none;
+
+}
+.btn-delete{
+    background-color:black;
+    color:white;
+    font-size:20px;
+    font-weight:5px;
+
+    border-radius:5px;
+    text-decoration:none;
+
+}
+.teacher-student{
+    display:flex;
+    justify-content :space-between;
+}
+.notice-image{
+    width:400px;
+    height:200px;
+    object-fit:cover;
+    
+}
+.galleryimage{
+    width:100%;
+   
+    object-fit:cover;
+}
+.classname{
+    width:100px;
+    height:100px;
+    font-size:large;
+    font-weight:bold;
+    color:black;
+    margin:5px;
+}

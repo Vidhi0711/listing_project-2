@@ -1,0 +1,68 @@
+<% layout('/layout/boilerplate') %>
+
+<body>
+    
+    <div class="row"> 
+        <div class="col-md-3">
+            <form method="post" action="/teachers/<%= teacher._id %>/edit?_method=PUT" class="needs-validation" novalidate>
+                
+                <div>
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text"value="<%=teacher.name%>" name="name" class="form-control" required>
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+
+                <div>
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" value ="<%=teacher.email%>" name="email" class="form-control" required>
+                    <div class="invalid-feedback">Please enter a valid email.</div>
+                </div>
+
+                <div>
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="number" value="<%=teacher.phone%>" name="phone" class="form-control" required>
+                    <div class="invalid-feedback">Please enter a valid phone number.</div>
+                </div>
+
+                <div>
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" value="<%=teacher.address%>" name="address" class="form-control">
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+
+                <div>
+                    <label for="classes" class="form-label">Classes (comma-separated)</label>
+                    <input type="text" value="<%=teacher.classes%>" name="classes" class="form-control" required>
+                    <div class="invalid-feedback">Please enter valid classes.</div>
+                </div>
+
+                <div>
+                    <label for="subjects" class="form-label">Subjects (comma-separated)</label>
+                    <input type="text"  value="<%=teacher.subjects%>" name="subjects" class="form-control" required>
+                    <div class="invalid-feedback">Please enter valid subjects.</div>
+                </div>
+
+                <div>
+                    <label for="qualification" class="form-label">Qualification (comma-separated)</label>
+                    <input type="text"  value="<%=teacher.qualification%>" name="qualification" class="form-control" required>
+                    <div class="invalid-feedback">Please enter valid qualifications.</div>
+                </div>
+
+                <div>
+                    <label for="experience" class="form-label">Experience (comma-separated)</label>
+                    <input type="text" value="<%=teacher.experience%>"  name="experience" class="form-control" required>
+                    <div class="invalid-feedback">Please enter valid experience.</div>
+                </div>
+
+                <div>
+                    <label for="dateOfJoining" class="form-label">Date of Joining</label>
+                    <input type="date" value="<%=teacher.dateOfJoining%>" name="dateOfJoining" class="form-control" required>
+                    <div class="invalid-feedback">Please enter a valid date.</div>
+                </div>
+
+                <button class="btn btn-primary mt-3">Submit</button>
+            </form>
+            </div>
+            </div>
+            
+</body>

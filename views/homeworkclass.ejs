@@ -1,0 +1,50 @@
+<% layout('/layout/boilerplate') %>
+<body>
+    <br>
+   
+    <form method="get" action="/homework/<%=classid %>/addhomework" >
+        <button type="submit" class="btn btn-primary">
+            Add homework
+        </button>
+    </form>
+  
+    <br>
+    <br> 
+    <% for (h of homework) { %>
+    <div class="card text-dark bg-info mb-3" style="max-width: 18rem;">
+        <div class="card-header"> HW  <%=h.className.className %> </div>
+        <div class="card-body">
+
+            <h5 class="card-title">
+               
+                <p style="color:rgb(14, 13, 13)">  <%= h.description %></p>
+
+            </h5>
+            
+            <p class="card-text">
+                <p> <%= new Date(h.createdAt).toLocaleString() %></p>
+
+    <form method="post" action="/homework/<%=h._id %>/<%=h.className._id %>?_method=delete">
+        <button class="btn btn-primary">
+            delete 
+        </button>
+
+    </form>       
+   
+        
+       
+
+              
+            </p>
+            
+          
+            
+            
+          </p>
+        </div>
+      </div>
+      <% } %>
+    
+
+   
+</body>

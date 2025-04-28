@@ -1,0 +1,49 @@
+<% layout('/layout/boilerplate') %>
+
+<body>
+    <h1> this is the about page </h1>
+    <div class="row">
+        <div class="col-4 offset-3 ">
+    <div class="card" style="width: 19rem;">
+        <img class="card-img-top" src="<%=student.image%>" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%=student.name%> </h5>
+          <p class="card-text">
+            <strong>Roll Number:</strong> <%=student.rollNo%><br>
+            
+            <strong>Age:</strong> <%=student.age%> years<br>
+            <strong>Gender:</strong> <%=student.gender%>
+            <br>
+            <strong>Father's Name:</strong> <%=student.fathername%>
+            <br>
+            <strong>Mother's Name:</strong> <%=student.mothername%>
+            <br> 
+            <strong>Phone Number:</strong> <%=student.parentcontact%><br>
+
+            <strong>Address:</strong> <%=student.address%><br>
+            <strong>Date of Birth:</strong> <%=student.dateOfBirth%>
+            <br>
+            <strong>Gender:</strong> <%=student.gender%>
+            <br>
+            <strong>password:</strong> <%=student.password%>
+            <br>  <strong>email:</strong> <%=student.email%>
+            <br>  <strong>username:</strong> <%=student.username%>
+            <br>
+           
+           
+          </p>
+          <div class="editdelete">
+          <a href="/class/students/<%=student._id%>/details/edit" class="btn-edit">Edit</a>
+          <form method="post" action='/class/students/<%=student._id%>/details/delete?_method=delete'>
+            <button type="submit" class="btn-delete">
+                Delete
+            </button>
+          </form>
+        </div>
+          
+        </div>
+      </div>
+    </div>
+    </div>
+    
+</body>

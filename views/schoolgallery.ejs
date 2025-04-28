@@ -1,0 +1,19 @@
+<% layout('/layout/boilerplate') %>
+
+<body>
+    <div class="container">
+        <a href="/school/gallery/upload" class="btn btn-primary"> upload </a>
+        <div class="row">
+            <% for (photos of images) { %>
+
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img  class="galleryimage" src="<%=photos.image %>" alt="photos">
+                    <p> <%=photos.caption %> </p>
+                
+        </div>
+        <% } %>
+
+    </div>
+</div>
+  
+</body>

@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-md border-bottom  bg-body-light sticky-top" >
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"> <i class="ri-compass-fill"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+          <a class="nav-link" href="/suppoters/driver"> Supportors  </a>
+          <a class="nav-link" href="/class">Classes</a>
+          <a class="nav-link" href="/teachers"> Teacher </a>
+          <a class="nav-link" href="/Notices"> Notices</a>
+          <a class="nav-link" href="/school/gallery"> Gallery </a>
+          <a class="nav-link" href="/homework"> Homework </a>
+          <a class="nav-link" href="/school/fees" > Fees </a>
+          
+        
+        </div>
+        <div class="navbar-nav ms-auto" >
+        
+            
+          <% if (!currentUser) { %>
+            <a class="nav-link" href="/user/login">Login</a>
+            <a class="nav-link" href="/user/signup">Signup</a>
+          <% } else { %>
+            <span class="nav-link disabled">Welcome, <%= currentUser.username %></span>
+            <a class="nav-link" href="/user/logout">Logout</a>
+          <% } %>
+          
+          
+        
+        </div>
+      </div>
+    </div>
+  </nav>

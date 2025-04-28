@@ -1,0 +1,30 @@
+<% layout('/layout/boilerplate') %>
+
+<body>
+
+    <form method="post" action="/notices/<%=notice._id%>/edit?_method=PUT" class="needs-validation" novalidate>
+        <div>
+            <label for="title" class="form-label">title</label>
+            <input type="text" name="title" value="<%=notice.title%>" class="form-control" required>
+            <div class="valid-feedback">Looks good!</div>
+        </div>
+    
+        <div>
+            <label for="content" class="form-label">content </label>
+            <input type="text" name="content" value="<%=notice.content%>" class="form-control" required>
+            <div class="invalid-feedback">Please enter a valid teacher name.</div>
+        </div>
+    
+        <div>
+            <label for="createdAt" class="form-label">createdAt </label>
+            <input type="date" name="createdAt" value="<%=notice.createdAt%>" class="form-control" required>
+            <div class="invalid-feedback">Please enter the total number of students.</div>
+        </div>
+    
+      
+    
+        <button class="btn btn-primary">Submit</button>
+    </form>
+    
+    
+</body>

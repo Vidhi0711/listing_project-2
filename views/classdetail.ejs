@@ -1,0 +1,38 @@
+<% layout('/layout/boilerplate') %>
+
+<body>
+
+    <h1> welcome to patricular class </h1>
+    <div class="container">
+        <h1>Student Portal</h1>
+         <p>Welcome, Student!</p>
+         <p> <%=Class.className%> </p>
+         <form method="get" action="/class/<%=Class._id%>/newstudent">
+          <button  class="btn btn-primary">
+            Add new Student 
+          </button>
+          </form>
+          <div class="row row-cols-lg-3 row-cols-md-2 g-4">
+            <% for (let student of students ) { %> 
+              <div class="col">
+                <div class="card" style="width: 14rem;">
+                  <img src="<%=student.image%>" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title"><%=student.name %> <h5>
+                      
+                    <p class="card-text">
+                            Age :  <%=student.age %><br> 
+                             Gender:  <%=student.gender%> 
+                             <br> 
+                             RollNo: <%=student.rollNo %> 
+                               </p>
+                    <a href="/class/students/<%=student._id%>/details" class="btn btn-primary">More information </a>
+                  </div>
+                </div>
+              </div>
+            <% } %> 
+          </div>
+        </div>
+        
+  
+</body>

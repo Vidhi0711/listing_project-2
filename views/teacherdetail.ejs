@@ -1,0 +1,44 @@
+<% layout('/layout/boilerplate') %>
+
+<body>
+
+    <h1> this is the about page </h1>
+    <div class="row">
+        <div class="col-4 offset-3 ">
+    <div class="card" style="width: 19rem;">
+        <img class="card-img-top" src="<%=teacher.image%>" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%=teacher.name%> </h5>
+          <p class="card-text">
+            
+            <strong>Gender:</strong> <%=teacher.gender%>
+            <br>
+            
+            <strong>Phone Number:</strong> <%=teacher.phone%><br>
+
+            <strong>Address:</strong> <%=teacher.address%><br>
+            <strong> Email: </strong> <%=teacher.email%><br>
+            <strong> Qualification : </strong><%=teacher.qualification%><br>
+            <strong> Course:</strong> <%=teacher.subjects %><br>
+            <strong>Expreience:</strong> <%=teacher.experience %> <br>
+            <strong> JoiningDate :</strong><%=teacher.Dateofjoining%><br>
+            <strong> Classes :</strong><%=teacher.classes.map(cls => cls.className)%> 
+           
+           
+           
+          </p>
+          <div class="editdelete">
+            <a href="/teachers/<%=teacher._id%>/edit" class="btn-edit">Edit</a>
+            <form method="post" action='/teachers/<%=teacher._id%>/delete?_method=delete'>
+              <button type="submit" class="btn-delete">
+                  Delete
+              </button>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    </div>
+    
+</body>

@@ -1,0 +1,60 @@
+
+<% layout('/layout/boilerplate') %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Fee Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .info {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        .label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Shiksha International Play School</h2>
+        <h3>Student Fee Details</h3>
+    <p> <% student %> </p>
+        <div class="info"><span class="label">Name:</span> <%= student.name %></div>
+        <div class="info"><span class="label">Father's Name:</span> <%= student.fathername %></div>
+        <div class="info"><span class="label">Mother's Name:</span> <%= student.mothername %></div>
+        <div class="info"><span class="label">Gender:</span> <%= student.gender %></div>
+        <div class="info"><span class="label">Parent Contact:</span> <%= student.parentcontact.join(', ') %></div>
+        <div class="info"><span class="label">Email:</span> <%= student.email %></div>
+        <div class="info"><span class="label">Username:</span> <%= student.username %></div>
+        <div class="info"><span class="label">Fees:</span> ₹<%= student.fees %></div>
+        <a href="/download-jpg">
+            <button>Download Fee Details as JPG</button>
+        </a>
+        
+    </div>
+    
+</body>
+</html>

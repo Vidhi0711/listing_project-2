@@ -1,0 +1,57 @@
+<% layout('/layout/boilerplate') %>
+
+<body>
+    <div class="container">
+      <h1>Student Portal</h1>
+       <p>Welcome, Student!</p>
+       <form method="get" action="/class/newclass">
+       <button  type="submit" class="btn btn-primary"> Newclass </button>
+      </form>
+      
+        <div class="row row-cols-lg-3 row-cols-md-2 g-4">
+          <% for (let classitem of allclass ) { %> 
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="https://img.freepik.com/free-vector/girls-boys-students-with-woman-teacher-classroom_24640-45504.jpg?semt=ais_hybrid" class="card-img-top" alt="...">
+               
+                <div class="card-body">
+                  <h5 class="card-title"><%=classitem.className %> <h5>
+                    <p> <%=classitem._id%> </p>
+                  <p class="card-text">
+                           <%=classitem.Teacher %>
+                           TotalNumber of Student :<%=classitem.students%> 
+                  
+
+
+                             </p>
+                             <div class="teacher-student">
+                              <a href="/class/<%=classitem._id%>/students" class="btn btn-primary"> Students </a>
+                              <a href="/teachers/<%=classitem._id%>" class="btn btn-primary">Teacher </a>
+                             </div>
+                             <hr></hr>      
+                 
+                  <br>
+                  <div class="editdelete">
+                    <form method="post" action="/class/<%=classitem._id%>/delete?_method=DELETE">
+                      <button onClick="return confirm('Are you sure you want to delete?');" class="btn-delete"> Delete </button>
+                    </form>
+                    
+                    <a href="class/<%=classitem._id%>/edit" class="btn-edit"> Edit </a>
+                 
+                  </div>
+
+                  
+                </div>
+              </div>
+            </div>
+          <% } %> 
+
+        </div>
+      </div>
+     
+
+   
+    
+    
+    
+</body>

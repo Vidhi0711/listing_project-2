@@ -1,0 +1,38 @@
+<% layout('/layout/boilerplate') %>
+
+<body>
+    
+
+
+    <h3>create new class </h3>
+    <form method="post" action="/class/newclass" class="needs-validation" novalidate>
+        <div>
+            <label for="className" class="form-label">Class Name</label>
+            <input type="text" name="className" placeholder="Class Name" class="form-control" required>
+            <div class="valid-feedback">Looks good!</div>
+        </div>
+    
+        <div>
+            <label for="classTeacher" class="form-label">Class Teacher</label>
+            <input type="text" name="classTeacher" placeholder="Class Teacher Name" class="form-control" required>
+            <div class="invalid-feedback">Please enter a valid teacher name.</div>
+        </div>
+    
+        <div>
+            <label for="students" class="form-label">Students</label>
+            <input type="text" name="students" placeholder="Total Students" class="form-control" required>
+            <div class="invalid-feedback">Please enter the total number of students.</div>
+        </div>
+    
+        <div>
+            <label for="courses" class="form-label">Courses</label>
+            <input type="text" name="courses" placeholder="Courses" class="form-control" required>
+            <div class="invalid-feedback">Please enter valid course names.</div>
+            <div class="valid-feedback">Looks good!</div>
+        </div>
+    
+        <button class="btn btn-primary">Submit</button>
+    </form>
+    
+    
+</body>

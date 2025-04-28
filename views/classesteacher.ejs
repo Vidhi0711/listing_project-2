@@ -1,0 +1,28 @@
+<% layout('/layout/boilerplate') %>
+</body>
+<div class="container">
+   <h1>Teacher Portal</h1>
+    <p>Welcome, !</p>
+     <form method="get" action="/teachers/<%=classid%>/newteacher">
+       <button  type="submit" class="btn btn-primary">  Add New Teacher </button>
+      </form>
+     <div class="row row-cols-lg-3 row-cols-md-2 g-4">
+       <% for (let teacher of teachers ) { %> 
+         <div class="col">
+           <div class="card" style="width: 18rem;">
+             <img src="<%=teacher.image%> " class="card-img-top" alt="...">
+             <div class="card-body">
+               <h5 class="card-title"><%=teacher.name %> <h5>
+                
+               <p class="card-text">
+                       <h5><%=teacher.email %> </h5> <br> 
+                        <%=teacher.phone%> 
+                          </p>
+               <a href="/teachers/<%=teacher._id%>/teacherdetail" class="btn btn-primary">Details </a>
+             </div>
+           </div>
+         </div>
+       <% } %> 
+     </div>
+   </div>
+</body>

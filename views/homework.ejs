@@ -1,0 +1,20 @@
+<% layout('/layout/boilerplate') %>
+
+<body>
+    <div class="row">
+    <% for (cls of classdata) { %>
+        <br> 
+        <br> 
+        <div class="col-md-3 col-sm-3">
+            <form  method="get" action="/homework/<%=cls.id%>">
+                <button type="submit" class="btn btn-primary classname" width="200px">
+                    <%=cls.className%> 
+                </button>
+            </form>
+        </div>
+
+        <% } %> 
+    </div>
+
+
+</body>

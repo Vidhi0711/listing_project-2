@@ -1,0 +1,26 @@
+<% layout('/layout/boilerplate') %>
+
+
+<p> Only png  or jpg file is allow to upload </p>
+<form method="post" action="/gallery/upload" enctype="multipart/form-data"  class="needs-validation" novalidate>
+    <div>
+    
+    <lable for="caption" class="form-lable" >Title</lable>
+    <input type="text" name="caption" placeholder="caption" class="form-control"   >
+    <div class="valid-feedback">
+        looks good;
+    </div>
+</div>
+
+  
+<div clas="mb-3">
+    <lable for="image"class="form-lable" required > Uploadimage</lable>
+
+        <input type="file" name="image" placeholder="enterl" required class="form-control" > 
+    </div>
+    
+       
+        <button clas="btnofnew" type="submit"> 
+            submit
+        </button>
+</form>

@@ -1,0 +1,52 @@
+<% layout('/layout/boilerplate') %>
+<div class="row mt-3">
+    <h1> Sign Up</h1>
+    <% if (locals.error && locals.error.length > 0) { %>
+        <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+    
+    
+    <div class="col-6 offset-2">
+        <form action="/user/signup" method="post" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="username" class="form-lable">Username </label>
+                <input type="text" class="form-control" required  placeholder="Username" name="username" id="username">
+                <div class="valid-feedback">
+                    Valid username
+                </div>
+                <div class="invalid-feedback">
+                    password should not be empty
+                </div>
+            </div>
+            <div  class="mb-3">
+                <label for ="email" class="form-label"> Email</label>
+                <input type="email" id="email" name="email" placeholder="email" class="form-control" required>
+                <div class="valid-feedback">
+                    Valid email
+    </div>
+    <div class="invalid-feedback">
+        password should not be empty
+    </div>
+            </div>
+            <div class="mb-3">
+                <label for ="password" class="form-lable" > Password</label>
+                <input type="password" id="password" name="password"  required class="form-control">
+                <div class="valid-feedback">
+                    Valid pasword;
+                </div>
+                <div class="invalid-feedback">
+                    password should not be empty
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                Sign UP
+            </button>
+        </form>
+
+    </div>
+</div>
+<body>
+    
+    
+</body>
+</html>

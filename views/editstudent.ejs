@@ -1,0 +1,76 @@
+<% layout('/layout/boilerplate') %>
+
+<body>
+    
+
+   
+    <h3>create new class </h3>
+    <form method="post" action="/class/students/<%=editstudent._id%>/details/edit?_method=PUT" class="needs-validation" novalidate>
+        <div>
+            <label for="name" class="form-label">Name</label>
+            <input type="text" name="name" value="<%=editstudent.name%>" class="form-control" required>
+            <div class="valid-feedback">Looks good!</div>
+        </div>
+    
+        <div>
+            <label for="rollNo" class="form-label">RollNo</label>
+            <input type="Number" name="rollNo" value="<%=editstudent.rollNo%>" class="form-control" required>
+            <div class="invalid-feedback">Please enter a valid rollno.</div>
+        </div>
+    
+        <div>
+            <label for="age" class="form-label">Age</label>
+            <input type="Number" name="age" value="<%=editstudent.edit%>" class="form-control" required>
+            <div class="invalid-feedback">Please enter valid age </div>
+        </div>
+    
+        <div>
+            <label for="gender" class="form-label">Gender</label>
+            <input type="text" name="Gender" value="<%=editstudent.gender%>" class="form-control" required>
+            <div class="invalid-feedback">Please enter valid gender.</div>
+            <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div>
+            <label for="address" class="form-label">address</label>
+            <input type="text" name="address" value="<%=editstudent.address%>" class="form-control" required>
+            <div class="invalid-feedback">Please enter valid address</div>
+            <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div>
+            <label for="fathername" class="form-label">address</label>
+            <input type="text" name="fathername" value="<%=editstudent.fathername%>" class="form-control" required>
+            <div class="invalid-feedback">Please enter valid fathername</div>
+            <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div>
+            <label for="mothername" class="form-label">mothername</label>
+            <input type="text" name="mothername" value="<%=editstudent.mothername%>" class="form-control" required>
+            <div class="invalid-feedback">Please enter valid mothername</div>
+            <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div>
+            <label for="dateOfBirth" class="form-label">dateOfBirth</label>
+            <input type="text" name="dateOfBirth" value="<%=editstudent.dateOfBirth%>" class="form-control" required>
+            <div class="invalid-feedback">Please enter valid dateOfBirth</div>
+            <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div>
+            <label for="parentcontact" class="form-label">parentcontact</label>
+            <input type="Number" name="parentcontact" value="<%=editstudent.parentcontact%>" class="form-control" required>
+            <div class="invalid-feedback">Please enter valid parentcontact</div>
+            <div class="valid-feedback">Looks good!</div>
+        </div>
+      
+        <div>
+            <label for="grade" class="form-label">parentcontact</label>
+            <input type="text" name="grade" value="<%=editstudent.grade%>" class="form-control" required>
+            <div class="invalid-feedback">Please enter valid grade </div>
+            <div class="valid-feedback">Looks good!</div>
+        </div>
+        
+    
+        <button class="btn btn-primary">Submit</button>
+    </form>
+    
+    
+</body>
